@@ -1,0 +1,146 @@
+@import './global/global.css';
+
+section.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+section.login .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cor-branco);
+  width: 100%;
+  max-width: 450px;
+}
+
+section.login .quadro .faixa {
+  width: 900px;
+  height: 150px;
+  background-color: var(--cor-principal);
+  position: absolute;
+  box-shadow: 0 0 30px 0 var(--cor-principal);
+  animation: rodarfaixa 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rodarfaixa {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section.login .quadro .conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--cor-branco);
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 2;
+}
+
+section.login .quadro .conteudo h2 {
+  font-family: Poppins bold;
+  font-size: 2rem;
+  color: var(--cor-principal);
+  letter-spacing: 10px;
+}
+
+section.login .quadro .conteudo p {
+  font-family: Poppins;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-cinza-escuro);
+}
+
+section.login .quadro .conteudo label {
+  font-family: Poppins;
+  font-size: 0.8rem;  
+  line-height: 1.5;
+  color: var(--cor-cinza-escuro);
+  width: 100%;
+  text-align: left;
+  margin: 20px 0 10px 0;
+}
+
+section.login .quadro .conteudo label span {
+  color: var(--cor-principal);
+}
+
+section.login .quadro .conteudo .input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+section.login .quadro .conteudo .input .bolinha {
+  width: 15px;
+  height: 15px;
+  background-color: var(--cor-principal);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+section.login .quadro .conteudo .input:hover .bolinha {
+  transform: scale(0.8);
+  background-color: var(--cor-cinza-escuro);
+}
+
+section.login .quadro .conteudo .input input {
+  font-family: Poppins;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-cinza-escuro);
+  background-color: var(--cor-cinza-claro);
+  width: 100%;
+  padding: 20px 20px 20px 45px;
+  border-radius: 10px;
+}
+
+section.login .quadro .conteudo .input input::placeholder {
+  color: #00000053;
+}
+
+section.login .quadro .conteudo button {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+
+section.login .quadro .conteudo button:hover {
+  background-color: var(--cor-cinza-escuro);
+}
+
+@media screen and (max-width: 600px) {
+  section.login .quadro .conteudo {
+    padding: 40px 20px;
+  }
+}
